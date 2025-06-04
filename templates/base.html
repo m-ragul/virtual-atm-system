@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Virtual ATM{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+    {% block header %}
+    <div class="simple-header">
+        <h1 class="title">Virtual ATM System</h1>
+        <a href="{% block home_url %}/dashboard{% endblock %}" class="home-btn" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+    {% endblock %}
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Balance Inquiry{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Balance Inquiry</h1>
+    <form method="POST" action="/balance">
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" required>
+        <br>
+        <input type="submit" value="Check Balance">
+    </form>
+    <div class="result-message"></div>
+    {% if balance_message %}
+    <p class="message">{{ balance_message }}</p>
+    {% endif %}
+    {% if error_message %}
+    <p class="message">{{ error_message }}</p>
+    {% endif %}
+</div>
+{% endblock %}

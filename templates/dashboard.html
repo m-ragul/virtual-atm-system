@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-container">
+    
+    <div class="card-container">
+        <div class="card">
+            <h2>Deposit</h2>
+            <p>Deposit money in your account</p>
+            <a href="/deposit" class="btn">Deposit</a>
+        </div>
+        <div class="card">
+            <h2>Withdraw</h2>
+            <p>Withdraw money in your account</p>
+            <a href="/withdrawal" class="btn">Withdraw</a>
+        </div>
+        <div class="card">
+            <h2>Balance Inquiry</h2>
+            <p>View your current balance</p>
+            <a href="/balance" class="btn">Check Balance</a>
+        </div>
+        <div class="card">
+            <h2>Change PIN</h2>
+            <p>Update your security PIN</p>
+            <a href="/pin_change" class="btn">Change PIN</a>
+        </div>
+        <div class="card">
+            <h2>Transactions</h2>
+            <p>Review your transaction history</p>
+            <a href="/transaction_history" class="btn">View History</a>
+        </div>
+        <div class="card">
+            <h2>Logout</h2>
+            <p>Securely end your session</p>
+            <a href="/logout" class="btn">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

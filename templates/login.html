@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login - Virtual ATM{% endblock %}
+
+{% block home_url %}/{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Login</h1>
+    <form method="POST" action="/login">
+        <label for="account_number">Account Number:</label>
+        <input type="text" id="account_number" name="account_number" required>
+        <br>
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <div class="result-message"></div>
+    {% if error_message %}
+    <p class="message">{{ error_message }}</p>
+    {% endif %}
+</div>
+{% endblock %}
